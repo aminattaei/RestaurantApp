@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Detail</title>
+</head>
+<style>
+    table{
+        width: auto;
+        background-color: rgb(201, 123, 34);
+        margin: 20px auto;
+        border-radius: 10px;
+        padding: 10px;
+        direction: rtl;
+    }
+    
+</style>
+
+<body>
+    <table border="2">
+        <tr>
+            <th>شماره ی غذا</th> <th>نام غذا</th> <th>توضیحات</th> <th>امتیاز غذا</th> <th>قیمت غذا</th> <th> زمان لازم</th> <th>تصویر</th>
+        </tr>
+
+            <tr>
+                <td>{{food.pk}}</td> <td>{{food.name}}</td> <td>{{food.description}}</td> <td>{{food.rate}}</td> <td>{{food.price}}</td> <td>{{food.time}} دقیقه</td> <td><a href="{{food.photo.url}}"><img src="{{food.photo.url}}" style="width: 70px; height: 70x; border: 20px;" alt="{{ food.name}}"></a></td>
+            </tr>
+    </table>
+
+    
+</body>
+</html>
